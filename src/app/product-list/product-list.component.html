@@ -1,0 +1,43 @@
+<h2>Películas</h2>
+
+<div *ngFor="let pelicula of peliculas">
+  <h3>
+    <a [title]="pelicula.name + ' details'">
+      {{ pelicula.name }}
+    </a>
+  </h3>
+  <p *ngIf="pelicula.description">Description: {{ pelicula.description }}</p>
+  <button type="button" (click)="share()">Share</button>
+</div>
+
+<h2>Videojuegos</h2>
+
+<div *ngFor="let videojuego of videojuegos">
+  <h3>
+    <a [title]="videojuego.name + ' details'">
+      {{ videojuego.name }}
+    </a>
+  </h3>
+  <p *ngIf="videojuego.description">
+    Description: {{ videojuego.description }}
+  </p>
+  <button type="button" (click)="share()">Share</button>
+</div>
+
+<h2>Ebooks</h2>
+
+<div *ngFor="let ebook of ebooks">
+  <h3>
+    <a [title]="ebook.name + ' details'">
+      {{ ebook.name }}
+    </a>
+  </h3>
+  <p *ngIf="ebook.description">Description: {{ ebook.description }}</p>
+  <button type="button" (click)="share()">Share</button>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
